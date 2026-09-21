@@ -16,11 +16,11 @@ def getAges():
 def main():
     print(name_list)
     print(f"the third name is: {name_list[2]}")
-    print(f"the last 7 names are: {name_list[11::1]}")
+    print(f"the last 7 names are: {name_list[(len(name_list) - 7):]}")
     print(f"length is {len(number_list)}")
-    print(sum(number_list))
-    print(max(number_list))
-    print(min(number_list))
+    print(f"sum is{sum(number_list)}")
+    print(number_list[-1])
+    print(number_list[0])
     print(sum(number_list) / len(number_list))
     
 getAges()
