@@ -1,13 +1,10 @@
-
-name_list = ['Alp', 'Carter', 'Longyu', 'Samuel', 'Teo', 'Ryan', 'Oscar', 'George', 'Isaac', 'Kevin', 'Henry', 'Henry', 'Papa', 'Aidan', 'Thomas']
+name_list: list[str] = ['Alp', 'Carter', 'Longyu', 'Samuel', 'Teo', 'Ryan', 'Oscar', 'George', 'Isaac', 'Kevin', 'Henry', 'Henry', 'Papa', 'Aidan', 'Thomas']
 number_list = []
 def getNames():
     for i in range(3):
         name = input("Type in a name: ")
         name_list.append(name)
     
-
-
 def getAges():
     for i in range(5):
         number = int(input(f"enter number {i+1}: "))
