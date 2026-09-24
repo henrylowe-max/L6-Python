@@ -7,9 +7,12 @@ def questions():
     print(f"3. Check Next Task")
     print(f"4. Completed Current Task")
     print(f"5. Quit")
+    
+
  
 while Quit == False:   
     questions()
+    
     answer = int(input("what would you like to do? "))
     
     if answer == 1:
