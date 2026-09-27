@@ -2,11 +2,11 @@ toDoList = []
 currentTask = 0
 Quit = False
 def questions():
-    print(f"1. Add to List")
-    print(f"2. Display Whole List")
-    print(f"3. Check Next Task")
-    print(f"4. Completed Current Task")
-    print(f"5. Quit")
+    print("1. Add to List")
+    print("2. Display Whole List")
+    print("3. Check Next Task")
+    print("4. Completed Current Task")
+    print("5. Quit")
     
 
  
@@ -32,4 +32,3 @@ while Quit == False:
         Quit = True
     else:
         print("invalid syntax, try again")
-            
