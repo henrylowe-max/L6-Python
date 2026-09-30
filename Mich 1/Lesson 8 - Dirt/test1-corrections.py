@@ -20,6 +20,7 @@ Q1b. Calll this function in main {1 Mark}
 
 
 def pv() -> list[int]:
+    return[2**n for n in range(12)]
     """
     Q1a) return the list [1,2,4,...]  {2 marks}
     """
@@ -47,7 +48,7 @@ def readDenaryInt(minV:int, maxV:int) -> int:
             print("enter an integer")
         else:
             if minV <= value and value <= maxV:
-                 return value
+                return value
             else:
                 print(f"enter integer between {minV} and {maxV}: ")
 
@@ -67,20 +68,58 @@ def readDenaryInt(minV:int, maxV:int) -> int:
        {3 marks}
     Q3b. Calll this function in main {1 Mark}
 """
-#for n in range(len(revBin)-1,0-1,-1):
-# n = len(array)-1
-#while n >= 0:
-#   : :
+def denToRevBin(placeValues:list,data:int)-> list:
+    revBin = [ 0 for _ in range(len(placeValues))]
+
+    for n in range(len(revBin)-1,0-1,-1):
+        revBin[n] = data  //  placeValues[n]
+        data = data % placeValues[n]
+        
+    return revBin
+
+def showData(placeValues, revBinary):
+    
+    s = ""
+    for n in range(len(revBinary)):
+        s += f"{pv[n]:5}"
+    print(s)
+    for n in range(len(revBinary)):
+        s += f"{revBinary[n]:5}"
+    print(s)
+    
+    return
+    
+    
+    
+    
+    
+    pv = placeValues[:]
+    pv.reverse()
+    
+    revBinary = revBinary[:]
+    revBinary.reverse()
+    
+
+
+
+
+
+
+## q4 
+
 
 # - - - -  function defs end here - - - - -
 
 def main():
-    placeValues = None        # Q1b) assign placeValue the list genrated by pv() {1 mark}
-    data = None               # Q2b) call readDenaryInt() to read an integer between 100 and 4095 {1 mark}
-    revBinary =  None # Q3c) call denToRevBin(placeValue,data) to assign binary the reversed binary value
+    placeValues = pv()      # Q1b) assign placeValue the list genrated by pv() {1 mark}
+    data = readDenaryInt(100,4095)               # Q2b) call readDenaryInt() to read an integer between 100 and 4095 {1 mark}
+    revBinary = denToRevBin(placeValues,data)   # Q3c) call denToRevBin(placeValue,data) to assign binary the reversed binary value
 
     # call showData(placeValues, revBinary) below this line {1 mark}
+    showData(placeValues,revBinary)
     
+    print(placeValues)
+    print(revBinary)
     #- - - - end of main
 
 if __name__ == "__main__":
