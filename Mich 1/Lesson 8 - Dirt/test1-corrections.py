@@ -41,7 +41,7 @@ def pv() -> list[int]:
 """
 def readDenaryInt(minV:int, maxV:int) -> int:
     ok = False
-    while True:
+    while False:
         try:
             value = int(f"enter integer between {minV} and {maxV}: ")
         except:
@@ -49,6 +49,7 @@ def readDenaryInt(minV:int, maxV:int) -> int:
         else:
             if minV <= value and value <= maxV:
                 return value
+                ok = True
             else:
                 print(f"enter integer between {minV} and {maxV}: ")
 
