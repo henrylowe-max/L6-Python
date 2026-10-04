@@ -10,7 +10,7 @@ def getNames() -> list[str]:
 
 def getAges() -> list[int]:
     for i in range(Max):
-        ages[n] = str(input(f"enter age {i+1} "))
+        ages[i] = str(input(f"enter age {i+1} "))
     return ages
 
 def getInfo() -> None:
