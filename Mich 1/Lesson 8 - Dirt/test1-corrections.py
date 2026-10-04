@@ -41,9 +41,9 @@ def pv() -> list[int]:
 """
 def readDenaryInt(minV:int, maxV:int) -> int:
     ok = False
-    while False:
+    while ok == False:
         try:
-            value = int(f"enter integer between {minV} and {maxV}: ")
+            value = int(input(f"enter integer between {minV} and {maxV}: "))
         except:
             print("enter an integer")
         else:
@@ -82,16 +82,21 @@ def showData(placeValues, revBinary):
     
     s = ""
     for n in range(len(revBinary)):
-        s += f"{pv[n]:5}"
+        s += (f"{placeValues[n]:5}")
     print(s)
     for n in range(len(revBinary)):
-        s += f"{revBinary[n]:5}"
+        s += (f"{revBinary[n]:5}")
     print(s)
+    
+    pv = placeValues[:]
+    pv.reverse()
+        
+    revBinary = revBinary[:]
+    revBinary.reverse()
     
     return
     
-    
-    
+
     
     
     pv = placeValues[:]
@@ -109,7 +114,28 @@ def showData(placeValues, revBinary):
 ## q4 
 
 
-# - - - -  function defs end here - - - - -
+def hexConv(revBinary):
+    hexValues = "0123456789ABCDEF"
+    nibbles = [revBinary[i:i+4] for i in range(0, len(revBinary), 4)]
+    hexa = ""
+    
+    for nibble in nibbles:
+        nibble = nibble[::-1]
+        denary = 0
+        for digit in nibble:
+            denary = denary * 2 + digit
+        
+        hexa = hexValues[denary] + hexa
+    return hexa
+    
+    
+        
+    
+    #print(nib1)
+    #print(nib2)
+    #print(nib3)
+    
+#- - - -  function defs end here - - - - -
 
 def main():
     placeValues = pv()      # Q1b) assign placeValue the list genrated by pv() {1 mark}
@@ -117,10 +143,15 @@ def main():
     revBinary = denToRevBin(placeValues,data)   # Q3c) call denToRevBin(placeValue,data) to assign binary the reversed binary value
 
     # call showData(placeValues, revBinary) below this line {1 mark}
-    showData(placeValues,revBinary)
+    showData(placeValues, revBinary)
     
     print(placeValues)
     print(revBinary)
+    Hex = hexConv(revBinary)
+    print(Hex)
+    
+    
+    
     #- - - - end of main
 
 if __name__ == "__main__":
