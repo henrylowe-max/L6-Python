@@ -1,0 +1,6 @@
+001, Ghostbusters, 2016, PG, 116, Comedy
+002, The Legend of Tarzan, 2016, PG, 109, Action
+003, Jason Bourne, 2016, PG, 123, Action
+004, The Nice Guys, 2016, R, 116, Crime
+005, The Secret Life of Pets, 2016, G, 91, Animation
+006, Star Trek Beyond, 2016, PG, 120, Action
